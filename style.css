@@ -293,8 +293,12 @@
   border: none;
   width: 280px;
   border-radius: 25px;
+  cursor: pointer;
   padding: 6px;
   background-color: rgb(239, 239, 21);
+}
+.btn-singin:hover{
+  background-color: rgb(248 248 7);
 }
 .mini-split-card {
   background-color: pink;
