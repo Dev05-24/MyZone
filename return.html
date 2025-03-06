@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Return</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Roboto", sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      /* justify-content: flex-start; */
+      align-items: center;
+      height: 65vh;
+      /* background-color: red; */
+    }
+    .card {
+      border: 1px solid rgb(218, 196, 196);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 43vh;
+      width: 22%;
+      outline: none;
+      border-radius: 2%;
+      padding: 25px;
+      margin: 10px;
+    }
+    .btn {
+      width: 100%;
+      border-radius: 10px;
+      border: none;
+      padding: 7px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      background-color: rgb(236, 217, 18);
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: rgb(223, 206, 13);
+    }
+    .phone {
+      width: 100%;
+      padding: 7px;
+      margin-top: 0px;
+      border-radius: 5px;
+      border: none;
+      border: 1px solid black;
+    }
+    a {
+      color: blue;
+      text-decoration: dashed;
+    }
+    .heading {
+      margin-bottom: 20px;
+      /* font-size: 22px; */
+      font-weight: 100;
+      /* line-height: 20px; */
+    }
+    .para-1 {
+      margin-bottom: 3px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .para-2 {
+      font-size: 13px;
+      margin: 14px 0 14px 0;
+      /* color: #007185; */
+    }
+    .para-2 a {
+      color: #007185;
+      cursor: pointer;
+    }
+    .para-3 {
+      font-weight: bold;
+      margin: 0 0 5px 0;
+    }
+    hr {
+      background-color: transparent;
+      border-bottom-width: 0;
+      border-left-width: 0;
+      border-right-width: 0;
+      border-top: 1px solid #bbbfbf;
+      display: block;
+      height: 1px;
+      line-height: 19px;
+      margin-bottom: 14px;
+      margin-top: 0;
+    }
+    .end {
+      /* background-color: red; */
+      font-size: 13px;
+      margin-top: 13px;
+      color: #007185;
+    }
+    .end a{
+        cursor: pointer;
+    }
+    .image {
+      height: 70px;
+      width: 130px;
+      object-fit: cover;
+    }
+    .footer {
+      /* background-color: red; */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 8vh;
+      margin-top: 2%;
+    }
+    .footer p {
+      font-size: 13px;
+    }
+    ul {
+      display: flex;
+      gap: 29px;
+      font-size: 13px;
+    }
+    ul li {
+      list-style: none;
+      color: #007185;
+    }
+    .hr-lines {
+      position: relative;
+      text-align: center;
+      /* background-color: orange; */
+      font-size: 12px;
+      padding: 10px;
+      width: 340px;
+      color: grey;
+    }
+    .hr-lines::before {
+      content: "";
+      height: 0.5px;
+      width: 110px;
+      background: grey;
+      display: block;
+      position: absolute;
+      top: 50%;
+    }
+    .hr-lines:after {
+      content: " ";
+      height: 0.5px;
+      width: 120px;
+      background: grey;
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+    }
+    .create-btn {
+      width: 100%;
+      border-radius: 10px;
+      border: none;
+      padding: 7px;
+      margin-bottom: 6%;
+      background-color: rgb(238, 236, 236);
+      cursor: pointer;
+    }
+    .create-btn:hover{
+        cursor: pointer;
+        background-color: rgb(213, 206, 206);
+    }
+    @media (max-width:1336px) {
+      .card{
+        height: 52vh;
+        width: 30%;
+        justify-content: center;
+      }
+      .container{
+        height: 70vh;
+      }
+    }
+    @media (max-width:990px) {
+      .card{
+        width: 40%;
+      }
+    }
+    @media (max-width:743px) {
+      .card{
+        width: 55%;
+      }
+    }
+    @media (max-width:540px) {
+      .card{
+        width: 62%;
+      }
+    }
+    @media (max-width:1440px) {
+      .create-btn{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .new-login{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .hr-lines::before{
+        left: 44px;
+        width: 75px;
+      }
+      .hr-lines::after{
+        width: 75px;
+        right: 44px;
+      }
+    }
+    @media (max-width:1130px) {
+      .hr-lines::before{
+        left: 66px;
+        width: 55px;
+      }
+      .hr-lines::after{
+        width: 55px;
+        right: 66px;
+      }
+    }
+    @media (max-width:910px) {
+      .hr-lines::before{
+        left: 75px;
+        width: 44px;
+      }
+      .hr-lines::after{
+        width: 44px;
+        right: 75px;
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="image-cont">
+        <a href="./index.html"
+          ><img class="image" src="./images/logo.png" height="40" alt=""
+        /></a>
+      </div>
+      <div class="card">
+        <h2 class="heading">Sign in </h2>
+        <p class="para-1">Enter mobile number or email</p>
+        <input type="number" class="phone" />
+        <button class="btn">Continue</button>
+        <p class="para-2">
+          By continuing, you agree to MyZone
+          <a href=""><u>Conditions of Use</u></a> and
+          <a><u>Privacy Notice</u></a>
+        </p>
+        <!-- <hr style="height: 2px; width: 100%" /> -->
+        <div class="end">
+          <i class="bx bx-chevron-right"></i>
+          <a for="">Need Help?</a>
+          <!-- <select>
+            <option value="volvo">Forgot Password</option>
+            <option value="saab" >Other issues with Sign-In</option>
+        </select> -->
+        </div>
+      </div>
+      <div class="new-login">
+        <p class="hr-lines">New to MyZone?</p>
+        <a href="./new-user.html"><button class="create-btn">Create your MyZone account</button></a>
+      </div>
+    </div>
+    <hr />
+    <div class="footer">
+      <ul>
+        <li>Conditions of Use</li>
+        <li>Privacy Notice</li>
+        <li>Help</li>
+      </ul>
+
+      <p>This project is for educational purposes only and is not affiliated with MyStore.</p>
+    </div>
+  </body>
+</html>

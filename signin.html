@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400..700&family=Hind:wght@300;400;500;600;700&family=Kalnia+Glaze:wght@100..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Roboto", sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: center;
+      height: 60vh;
+      /* background-color: red; */
+    }
+    .card {
+      border: 1px solid rgb(218, 196, 196);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 43vh;
+      width: 22%;
+      outline: none;
+      border-radius: 2%;
+      padding: 25px;
+      margin: 10px;
+    }
+    .btn {
+      width: 100%;
+      border-radius: 16px;
+      border: none;
+      padding: 7px;
+      margin-top: 4px;
+      background-color: rgb(236, 217, 18);
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: rgb(223, 206, 13);
+    }
+    .phone {
+      width: 100%;
+      padding: 7px;
+      margin-top: 0px;
+      border-radius: 5px;
+      border: none;
+      border: 1px solid black;
+    }
+    a {
+      color: blue;
+      text-decoration: dashed;
+    }
+    .heading {
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+    .para-1 {
+      margin-bottom: 3px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .para-2 {
+      font-size: 13px;
+      margin: 14px 0 14px 0;
+      /* color: #007185; */
+    }
+    .para-2 a {
+      color: #007185;
+      cursor: pointer;
+    }
+    .para-3 {
+      font-weight: bold;
+      margin: 0 0 5px 0;
+    }
+    hr {
+      background-color: transparent;
+      border-bottom-width: 0;
+      border-left-width: 0;
+      border-right-width: 0;
+      border-top: 1px solid #bbbfbf;
+      display: block;
+      height: 1px;
+      line-height: 19px;
+      margin-bottom: 14px;
+      margin-top: 0;
+    }
+    .end {
+      font-size: 15px;
+    }
+    .end a {
+      color: #007185;
+    }
+    .image {
+      height: 70px;
+      width: 130px;
+      object-fit: cover;
+    }
+    .footer {
+      /* background-color: red; */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 8vh;
+    }
+    .footer p {
+      font-size: 13px;
+    }
+    ul {
+      display: flex;
+      gap: 29px;
+      font-size: 13px;
+    }
+    ul li {
+      list-style: none;
+      color: #007185;
+    }
+    @media (max-width:1336px) {
+      .card{
+        height: 52vh;
+        width: 30%;
+      }
+      .container{
+        height: 64vh;
+      }
+    }
+    @media (max-width:990px) {
+      .card{
+        width: 40%;
+      }
+    }
+    @media (max-width:743px) {
+      .card{
+        width: 55%;
+      }
+    }
+    @media (max-width:540px) {
+      .card{
+        width: 62%;
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="image-cont">
+        <a href="./index.html"
+          ><img class="image" src="./images/logo.png" alt=""
+        /></a>
+      </div>
+      <div class="card">
+        <p class="heading">Sign in or create account</p>
+        <p class="para-1">Enter mobile number or email</p>
+        <input type="number" class="phone" />
+        <button class="btn">Continue</button>
+        <p class="para-2">
+          By continuing, you agree to MyZone's
+          <a href=""><u>Conditions of Use</u></a> and
+          <a><u>Privacy Notice</u></a>
+        </p>
+        <hr style="height: 2px; width: 100%" />
+        <div class="end">
+          <p class="para-3"><b>Buying for work?</b></p>
+          <a href="#">Shop on MyZone Business</a>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="footer">
+      <ul>
+        <li>Conditions of Use</li>
+        <li>Privacy Notice</li>
+        <li>Help</li>
+      </ul>
+
+      <p>This project is for educational purposes only and is not affiliated with MyZone.</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Return</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Roboto", sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      height: 85vh;
+      /* background-color: red; */
+    }
+    .card {
+      border: 1px solid rgb(218, 196, 196);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 70vh;
+      width: 22%;
+      outline: none;
+      border-radius: 2%;
+      padding: 16px;
+      margin: 10px;
+      font-size: 12px;
+    }
+    .btn {
+      width: 100%;
+      border-radius: 10px;
+      border: none;
+      padding: 7px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      background-color: rgb(236, 217, 18);
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: rgb(223, 206, 13);
+    }
+    a{
+      color: blue;
+      text-decoration: dashed;
+    }
+    .heading {
+      margin-bottom: 20px;
+      font-weight: 100;
+    }
+    .para-2 {
+      font-size: 13px;
+      margin: 14px 0 14px 0;
+    }
+    .para-2 a {
+      color: #007185;
+      cursor: pointer;
+    }
+    hr {
+      background-color: transparent;
+      border-bottom-width: 0;
+      border-left-width: 0;
+      border-right-width: 0;
+      border-top: 1px solid #bbbfbf;
+      display: block;
+      height: 1px;
+      line-height: 19px;
+      margin-bottom: 14px;
+      margin-top: 0;
+    }
+    .end {
+      /* background-color: red; */
+      display: flex;
+      gap: 2px;
+      font-size: 13px;
+      margin-top: 13px;
+    }
+    .end a {
+      cursor: pointer;
+    }
+    .image {
+      height: 70px;
+      width: 130px;
+      object-fit: cover;
+    }
+    .footer {
+      /* background-color: red; */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 8vh;
+      margin-top: 2%;
+    }
+    .footer p {
+      font-size: 13px;
+    }
+    ul {
+      display: flex;
+      gap: 29px;
+      font-size: 13px;
+    }
+    ul li {
+      list-style: none;
+      color: #007185;
+    }
+    .create-btn {
+      width: 100%;
+      border-radius: 10px;
+      border: none;
+      padding: 7px;
+      margin-bottom: 6%;
+      background-color: rgb(238, 236, 236);
+      cursor: pointer;
+    }
+    .create-btn:hover {
+      cursor: pointer;
+      background-color: rgb(213, 206, 206);
+    }
+    .form {
+      /* background-color: pink; */
+      width: 100%;
+    }
+    .form label {
+      font-weight: bold;
+      /* color: white; */
+    }
+    .form input {
+      width: 100%;
+      margin: 4px 0 10px 0;
+      border-radius: 4px;
+      border: none;
+      font-size: 12px;
+      background-color: #fff;
+      height: 31px;
+      padding: 3px 7px;
+      line-height: normal;
+      border: 1px solid black;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="image-cont">
+        <a href="./index.html"
+          ><img class="image" src="./images/logo.png" alt=""
+        /></a>
+      </div>
+      <div class="card">
+        <h1 class="heading">Create Account</h1>
+        <div class="form">
+          <label for="fname">Your name</label>
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            value="First and Last name"
+          /><br />
+          <label for="user-email">Email</label>
+          <input
+            type="email"
+            id="user-email"
+            name="user-email"
+            value=""
+          /><br />
+          <label for="pass">Password</label>
+          <input
+            type="text"
+            id="pass"
+            name="pass"
+            value="At least 6 character"
+          />
+          <p>Passwords must be at least 6 characters.</p>
+          <br />
+          <label for="re-pass">Password again</label>
+          <input type="password" id="re-pass" name="re-pass" value="" /><br />
+
+          <button class="btn">Continue</button>
+        </div>
+        <p class="para-2">
+            By creating an account or logging in, you agree to MyZone’s 
+          <a href=""><u>Conditions of Use</u></a> and
+          <a><u>Privacy Notice</u></a>
+        </p>
+        <div class="end">
+            <p>Already have an account?</p>
+            <a href="./signin.html" for="">Sign in</a>
+            <i class="bx bx-chevron-right"></i>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="footer">
+      <ul>
+        <li>Conditions of Use</li>
+        <li>Privacy Notice</li>
+        <li>Help</li>
+      </ul>
+
+      <p>This project is for educational purposes only and is not affiliated with MyZone.</p>
+    </div>
+  </body>
+</html>
